@@ -14,6 +14,7 @@ import {
   IconButton,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
@@ -44,33 +45,42 @@ const NavBar = () => {
 
         <Box flex={1} align="right">
           <Hide below="md">
-            <Link isExternal="true" href="https://github.com/hazelhedmine">
-              <Button
-                mr="10"
-                variant="link"
-                colorScheme="black"
-                leftIcon={<FaGithub></FaGithub>}
-              >
-                Github
-              </Button>
-            </Link>
-            <Link isExternal="true" href="https://github.com/hazelhedmine">
-              <Button
-                variant="link"
-                colorScheme="black"
-                leftIcon={<FaLinkedin></FaLinkedin>}
-              >
-                LinkedIn
-              </Button>
-            </Link>
+            <IconButton
+              size="md"
+              fontSize="lg"
+              aria-label={`Go to Github`}
+              variant="ghost"
+              color="current"
+              marginLeft="2"
+              onClick={() => {
+                window.open('https://github.com/hazelhedmine');
+              }}
+              icon={<FaGithub />}
+            ></IconButton>
+            <IconButton
+              size="md"
+              fontSize="lg"
+              aria-label={`Go to LinkedIn`}
+              variant="ghost"
+              color="current"
+              marginLeft="2"
+              onClick={() => {
+                window.open('https://github.com/hazelhedmine');
+              }}
+              icon={<FaLinkedin />}
+            ></IconButton>
           </Hide>
+          <ColorModeSwitcher justifySelf="flex-end" />
           <Show below="md">
             <Menu isLazy="true" id="navbar-menu">
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
-                variant="outline"
+                variant="ghost"
                 aria-label="Options"
+                marginLeft="2"
+                size="md"
+                fontSize="2xl" // icon is smaller than rest, so increased this
               />
               <MenuList>
                 <Link href="/" passHref>
@@ -92,5 +102,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// <ColorModeSwitcher justifySelf="flex-end" />
