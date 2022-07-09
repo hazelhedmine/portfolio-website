@@ -9,15 +9,29 @@ import {
 import LandingLayout from '../components/layouts/LandingLayout';
 import Hero from '../components/sections/Hero';
 
+const StyledTab = ({ children, ...props }) => {
+  return (
+    <Tab
+      _selected={{ color: 'black', bg: 'white' }}
+      _hover={{ color: 'coral.600' }}
+      _active={{ size: 'lg' }}
+      borderTopRadius="lg"
+      {...props}
+    >
+      {children}
+    </Tab>
+  );
+};
+
 const LandingPage = () => {
   return (
     <LandingLayout>
       <Hero></Hero>
-      <Tabs colorScheme="coral" variant="enclosed-colored">
+      <Tabs colorScheme="coral" variant="unstyled" align="center" size="lg">
         <TabList>
-          <Tab>One</Tab>
-          <Tab>Two</Tab>
-          <Tab>Three</Tab>
+          <StyledTab>SKILLS</StyledTab>
+          <StyledTab>WORK EXPERIENCE</StyledTab>
+          <StyledTab>PROJECTS</StyledTab>
         </TabList>
 
         <TabPanels bg={useColorModeValue('white')}>
