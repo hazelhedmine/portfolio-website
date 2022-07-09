@@ -1,14 +1,17 @@
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 
 import theme from './theme';
 
-import NavBar from './components/NavBar';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar>
+      <Header></Header>
+      <Container>bottom stuff</Container> */}
+      <LandingPage></LandingPage>
     </ChakraProvider>
   );
 }
