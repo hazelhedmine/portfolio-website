@@ -2,7 +2,6 @@
 
 import {
   Box,
-  Container,
   Heading,
   Show,
   Hide,
@@ -13,7 +12,6 @@ import {
   MenuItem,
   MenuButton,
   IconButton,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -29,7 +27,6 @@ const Header = props => {
       w="100%"
       mb={8}
       p={8}
-      bg={useColorModeValue('coral.200', 'coral.900')}
       {...props}
     >
       <Flex align="center" mr={5}>
