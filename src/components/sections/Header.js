@@ -42,7 +42,6 @@ const Header = props => {
             fontSize="lg"
             aria-label={`Go to Github`}
             variant="ghost"
-            color="current"
             marginLeft="2"
             onClick={() => {
               window.open('https://github.com/hazelhedmine');
