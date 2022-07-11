@@ -12,6 +12,7 @@ import {
   MenuItem,
   MenuButton,
   IconButton,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -20,13 +21,17 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 const Header = props => {
   return (
     <Flex
+      position="fixed"
+      bg={useColorModeValue('coral.50', 'coral.900')}
       as="nav"
       align="center"
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
-      p={8}
+      mb={6}
+      paddingX={8}
+      paddingY={4}
+      zIndex={1} //to bring in front
       {...props}
     >
       <Flex align="center" mr={5}>

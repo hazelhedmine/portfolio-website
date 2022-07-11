@@ -9,7 +9,7 @@ const Hero = props => {
       wrap="no-wrap"
       minH="50vh" //so that it will be vertically centered
       px={8}
-      mb={32}
+      marginY={32}
       {...props}
     >
       <Stack
