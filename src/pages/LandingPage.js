@@ -14,6 +14,7 @@ import Skills from '../components/sections/Skills';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import Education from '../components/sections/Education';
 import Work from '../components/sections/Work';
+import Projects from '../components/sections/Projects';
 
 const StyledTab = ({ children, ...props }) => {
   return (
@@ -78,7 +79,9 @@ const LandingPage = () => {
             <TabPanel>
               <Work></Work>
             </TabPanel>
-            <TabPanel>Three</TabPanel>
+            <TabPanel>
+              <Projects></Projects>
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
