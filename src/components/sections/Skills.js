@@ -36,6 +36,26 @@ const TechnicalSkill = ({ icon, skill }) => {
   );
 };
 
+const SkillHeader = ({ header }) => {
+  return (
+    <Flex align="center">
+      <Divider borderBottomColor="gray.900" width="4vw" />
+      <Heading
+        as="h2"
+        size="md"
+        fontWeight="bold"
+        fontFamily='"Playfair Display", serif'
+        color="primary.800"
+        opacity="0.8"
+        padding={6}
+      >
+        {header}
+      </Heading>
+      <Divider borderBottomColor="gray.900" width="4vw" />
+    </Flex>
+  );
+};
+
 const Skills = ({ props }) => {
   return (
     <Flex
@@ -74,20 +94,7 @@ const Skills = ({ props }) => {
       </Flex>
 
       <Flex align="center" display="flex" direction="column" gap={4}>
-        <Flex align="center">
-          <Divider borderBottomColor="gray.900" width="4vw" />
-          <Heading
-            as="h2"
-            size="md"
-            fontWeight="bold"
-            fontFamily='"Playfair Display", serif'
-            color="gray.900"
-            padding={6}
-          >
-            web development
-          </Heading>
-          <Divider borderBottomColor="gray.900" width="4vw" />
-        </Flex>
+        <SkillHeader header="web development"></SkillHeader>
         <Flex
           align="center"
           justify="center"
@@ -109,20 +116,7 @@ const Skills = ({ props }) => {
       </Flex>
 
       <Flex align="center" display="flex" direction="column" gap={4}>
-        <Flex align="center">
-          <Divider borderBottomColor="gray.900" width="4vw" />
-          <Heading
-            as="h2"
-            size="md"
-            fontWeight="bold"
-            fontFamily='"Playfair Display", serif'
-            color="gray.900"
-            padding={6}
-          >
-            database systems
-          </Heading>
-          <Divider borderBottomColor="gray.900" width="4vw" />
-        </Flex>
+        <SkillHeader header="database systems"></SkillHeader>
         <Flex
           align="center"
           justify="center"
