@@ -1,5 +1,6 @@
 import {
-  Flex,
+  Box,
+  Heading,
   Tab,
   TabList,
   TabPanel,
@@ -10,6 +11,7 @@ import {
 import LandingLayout from '../components/layouts/LandingLayout';
 import Hero from '../components/sections/Hero';
 import Skills from '../components/sections/Skills';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 
 const StyledTab = ({ children, ...props }) => {
   return (
@@ -30,30 +32,48 @@ const LandingPage = () => {
     <LandingLayout>
       <Hero></Hero>
       <Skills></Skills>
-      <Flex align="center" px={8} mb={16}>
-        {/*TODO: responsive style for tabs, then add sections
-        maybe change to dropdown for mobile?
-         */}
+
+      <Heading
+        as="h1"
+        size="lg"
+        fontWeight="bold"
+        fontFamily='"Playfair Display", serif'
+        color="primary.800"
+        textAlign={['center', 'center', 'left', 'left']}
+        mb={6}
+      >
+        Select a tab to see it's details!
+      </Heading>
+      <ChevronDownIcon boxSize={12} mb={16}></ChevronDownIcon>
+
+      <Box align="center" px={8} mb={32} w="80%">
         <Tabs
-          colorScheme="coral"
+          colorScheme="cyan"
           fontWeight="normal"
           fontFamily='"Playfair Display", serif'
-          variant="unstyled"
+          variant="soft-rounded" //bc of custom styling
           align="center"
-          size="lg"
+          size={{ base: 'sm', sm: 'md', md: 'lg' }}
         >
-          <TabList>
-            <StyledTab>EDUCATION</StyledTab>
-            <StyledTab>WORK EXPERIENCE</StyledTab>
-            <StyledTab>PROJECTS</StyledTab>
+          <TabList mb={6}>
+            <Tab>EDUCATION</Tab>
+            <Tab>WORK EXPERIENCE</Tab>
+            <Tab>PROJECTS</Tab>
           </TabList>
-          <TabPanels bg={useColorModeValue('white')}>
+          <TabPanels
+            bg={useColorModeValue('white')}
+            borderRadius="lg"
+            borderBottom="4px solid" //for pop up effect
+            borderBottomColor="cyan.200"
+            borderRight="4px solid"
+            borderRightColor="cyan.200"
+          >
             <TabPanel>One</TabPanel>
             <TabPanel>Two</TabPanel>
             <TabPanel>Three</TabPanel>
           </TabPanels>
         </Tabs>
-      </Flex>
+      </Box>
     </LandingLayout>
   );
 };
