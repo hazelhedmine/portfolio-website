@@ -12,6 +12,7 @@ import LandingLayout from '../components/layouts/LandingLayout';
 import Hero from '../components/sections/Hero';
 import Skills from '../components/sections/Skills';
 import { ChevronDownIcon } from '@chakra-ui/icons';
+import Education from '../components/sections/Education';
 
 const StyledTab = ({ children, ...props }) => {
   return (
@@ -49,13 +50,15 @@ const LandingPage = () => {
       <Box align="center" px={8} mb={32} w="80%">
         <Tabs
           colorScheme="cyan"
-          fontWeight="normal"
-          fontFamily='"Playfair Display", serif'
           variant="soft-rounded" //bc of custom styling
           align="center"
           size={{ base: 'sm', sm: 'md', md: 'lg' }}
         >
-          <TabList mb={6}>
+          <TabList
+            fontWeight="normal"
+            fontFamily='"Playfair Display", serif'
+            mb={6}
+          >
             <Tab>EDUCATION</Tab>
             <Tab>WORK EXPERIENCE</Tab>
             <Tab>PROJECTS</Tab>
@@ -68,7 +71,9 @@ const LandingPage = () => {
             borderRight="4px solid"
             borderRightColor="cyan.200"
           >
-            <TabPanel>One</TabPanel>
+            <TabPanel>
+              <Education></Education>
+            </TabPanel>
             <TabPanel>Two</TabPanel>
             <TabPanel>Three</TabPanel>
           </TabPanels>
