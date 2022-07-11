@@ -1,10 +1,7 @@
 import {
   Box,
-  Code,
   Flex,
   ListItem,
-  Show,
-  SimpleGrid,
   Stat,
   StatHelpText,
   StatLabel,
