@@ -9,7 +9,7 @@ const Hero = props => {
       wrap="no-wrap"
       minH="50vh" //so that it will be vertically centered
       px={8}
-      mb={16}
+      mb={32}
       {...props}
     >
       <Stack
@@ -21,6 +21,7 @@ const Hero = props => {
           as="h1"
           size="xl"
           fontWeight="bold"
+          fontFamily='"Playfair Display", serif'
           color="primary.800"
           textAlign={['center', 'center', 'left', 'left']}
         >
@@ -32,6 +33,7 @@ const Hero = props => {
           color="primary.800"
           opacity="0.8"
           fontWeight="normal"
+          fontFamily='"Playfair Display", serif'
           lineHeight={1.5}
           textAlign={['center', 'center', 'left', 'left']}
         >
@@ -44,6 +46,8 @@ const Hero = props => {
           borderRadius="8px"
           lineHeight="1"
           size="lg"
+          fontWeight="bold"
+          fontFamily='"Playfair Display", serif'
           href="/Hazels-Resume.pdf"
           download
         >
