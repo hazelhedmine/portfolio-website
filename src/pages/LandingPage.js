@@ -16,20 +16,6 @@ import Education from '../components/sections/Education';
 import Work from '../components/sections/Work';
 import Projects from '../components/sections/Projects';
 
-const StyledTab = ({ children, ...props }) => {
-  return (
-    <Tab
-      _selected={{ color: 'black', bg: 'white' }}
-      _hover={{ color: 'coral.600' }}
-      _active={{ size: 'lg' }}
-      borderTopRadius="lg"
-      {...props}
-    >
-      {children}
-    </Tab>
-  );
-};
-
 const LandingPage = () => {
   return (
     <LandingLayout>

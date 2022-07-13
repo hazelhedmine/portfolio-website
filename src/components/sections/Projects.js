@@ -1,150 +1,63 @@
 import {
-  Box,
-  Button,
   Divider,
   Flex,
-  Link,
-  ListItem,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Stat,
-  StatHelpText,
-  StatNumber,
-  Tag,
-  UnorderedList,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
 } from '@chakra-ui/react';
+import FPGAMicroprocessor from './projects/FPGAMicroprocessor';
+import HeLeN from './projects/HeLeN';
 
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import LaserTag from './projects/LaserTag';
+import TimeToGoHome from './projects/TimeToGoHome';
+import UniTracker from './projects/UniTracker';
+
+const FirstPage = () => {
+  return (
+    <Flex direction="column" p={6} gap={6}>
+      <LaserTag theme="cyan"></LaserTag>
+
+      <Divider borderBottomColor="cyan.300"></Divider>
+
+      <FPGAMicroprocessor theme="coral"></FPGAMicroprocessor>
+
+      <Divider borderBottomColor="cyan.300"></Divider>
+
+      <UniTracker theme="purple"></UniTracker>
+    </Flex>
+  );
+};
+
+const SecondPage = () => {
+  return (
+    <Flex direction="column" p={6} gap={6}>
+      <HeLeN theme="cyan"></HeLeN>
+
+      <Divider borderBottomColor="cyan.300"></Divider>
+
+      <TimeToGoHome theme="coral"></TimeToGoHome>
+    </Flex>
+  );
+};
 
 const Projects = ({ props }) => {
   return (
-    <Flex direction="column" p={6} gap={6}>
-      <Stat textAlign={{ base: 'center', md: 'left' }}>
-        <StatNumber>Portfolio Website</StatNumber>
-        <StatHelpText>It's this website!</StatHelpText>
-      </Stat>
-
-      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
-        <Tag colorScheme="cyan">Javascript</Tag>
-        <Tag colorScheme="cyan">React</Tag>
-        <Tag colorScheme="cyan">Chakra UI</Tag>
-        <Tag colorScheme="cyan">DEPLOYER</Tag>
-      </Flex>
-
-      <Box align="left">
-        <UnorderedList fontSize="sm">
-          <ListItem>?</ListItem>
-        </UnorderedList>
-      </Box>
-      {/*---------------------------------*/}
-      <Divider borderBottomColor="cyan.300"></Divider>
-
-      <Stat textAlign={{ base: 'center', md: 'left' }}>
-        <StatNumber>Augmented Reality Laser Tag System</StatNumber>
-        <StatHelpText>Jan 2022 - May 2022</StatHelpText>
-      </Stat>
-
-      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
-        <Tag colorScheme="coral">Unity</Tag>
-        <Tag colorScheme="coral">Vuforia Engine</Tag>
-        <Tag colorScheme="coral">C#</Tag>
-        <Tag colorScheme="coral">AMQP</Tag>
-      </Flex>
-
-      <Box align="left">
-        <UnorderedList fontSize="sm">
-          <ListItem>
-            Built a 2-player Augmented Reality (AR) laser tag system in a team
-            of 5 by applying hardware and software engineering design principles
-            in designing and implementing a complex embedded system.
-          </ListItem>
-          <ListItem>
-            Created a Unity phone application as a visualiser for players that
-            displayed realtime AR gameplay effects such as shields and grenades
-            using Vuforia with C# scripting.
-          </ListItem>
-          <ListItem>
-            Utilized AMQP via an open source Unity3d project called{' '}
-            <Link
-              isExternal
-              color="coral.300"
-              href="https://github.com/CymaticLabs/Unity3D.Amqp"
-            >
-              Unity3D.Amqp
-            </Link>{' '}
-            to receive and send game data between the phone and game server
-            hosted on an Ultra96 FPGA.
-          </ListItem>
-        </UnorderedList>
-      </Box>
-      {/*---------------------------------*/}
-      <Divider borderBottomColor="cyan.300"></Divider>
-
-      <Flex
-        justify={{ base: 'left', md: 'space-between' }}
-        direction={{ base: 'column', md: 'row' }}
-      >
-        <Stat textAlign={{ base: 'center', md: 'left' }}>
-          <StatNumber>UniTracker</StatNumber>
-          <StatHelpText>January 2021 - May 2021</StatHelpText>
-        </Stat>
-        <Box align="center">
-          <Menu>
-            <MenuButton
-              variant={{ base: 'outline', md: 'ghost' }}
-              as={Button}
-              rightIcon={<ChevronDownIcon />}
-            >
-              links
-            </MenuButton>
-            <MenuList>
-              <MenuItem
-                as={Link}
-                isExternal
-                href="https://ay2021s2-cs2113t-f08-4.github.io/tp/UserGuide.html"
-              >
-                User Guide
-              </MenuItem>
-              <MenuItem
-                as={Link}
-                isExternal
-                href="https://github.com/AY2021S2-CS2113T-F08-4/tp"
-              >
-                Source Code
-              </MenuItem>
-            </MenuList>
-          </Menu>
-        </Box>
-      </Flex>
-
-      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
-        <Tag colorScheme="purple">CLI</Tag>
-        <Tag colorScheme="purple">Java</Tag>
-        <Tag colorScheme="purple">JUnit</Tag>
-        <Tag colorScheme="purple">Sourcetree</Tag>
-        <Tag colorScheme="purple">Markdown</Tag>
-      </Flex>
-
-      <Box align="left">
-        <UnorderedList fontSize="sm">
-          <ListItem>
-            Developed a university organizational tool in a team of 4 using Java
-            on the command line interface.
-          </ListItem>
-          <ListItem>
-            Implemented the task organization feature for users to categorize,
-            create, delete, pin and update the status of tasks using
-            Object-Oriented Programming in Java.
-          </ListItem>
-          <ListItem>
-            Practiced JUnit testing, build automation tools, code revision tools
-            and breadth-first iterative software development life cycles.
-          </ListItem>
-        </UnorderedList>
-      </Box>
-    </Flex>
+    <Tabs variant="soft-rounded" colorScheme="coral" align="center">
+      <TabList>
+        <Tab>1</Tab>
+        <Tab>2</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>
+          <FirstPage></FirstPage>
+        </TabPanel>
+        <TabPanel>
+          <SecondPage></SecondPage>
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
   );
 };
 
