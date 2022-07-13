@@ -48,6 +48,7 @@ const Header = props => {
             aria-label={`Go to Github`}
             variant="ghost"
             marginLeft="2"
+            _hover={{ bg: 'coral.100' }}
             onClick={() => {
               window.open('https://github.com/hazelhedmine');
             }}
@@ -60,13 +61,17 @@ const Header = props => {
             variant="ghost"
             color="current"
             marginLeft="2"
+            _hover={{ bg: 'coral.100' }}
             onClick={() => {
               window.open('https://sg.linkedin.com/in/hazelhedmine');
             }}
             icon={<FaLinkedin />}
           ></IconButton>
         </Hide>
-        <ColorModeSwitcher justifySelf="flex-end" />
+        <ColorModeSwitcher
+          _hover={{ bg: 'coral.100' }}
+          justifySelf="flex-end"
+        />
         <Show below="md">
           <Menu isLazy="true" id="navbar-menu">
             <MenuButton
@@ -75,6 +80,7 @@ const Header = props => {
               variant="ghost"
               aria-label="Options"
               marginLeft="2"
+              _hover={{ bg: 'coral.100' }}
               size="md"
               fontSize="2xl" // icon is smaller than rest, so increased this
             />
