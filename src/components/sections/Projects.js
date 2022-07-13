@@ -6,6 +6,7 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import Transition from '../transition';
 import FPGAMicroprocessor from './projects/FPGAMicroprocessor';
@@ -44,7 +45,12 @@ const SecondPage = () => {
 
 const Projects = ({ props }) => {
   return (
-    <Tabs isLazy variant="soft-rounded" colorScheme="coral" align="center">
+    <Tabs
+      isLazy
+      variant="soft-rounded"
+      colorScheme={useColorModeValue('coral', 'cyan')}
+      align="center"
+    >
       <TabList>
         <Tab>1</Tab>
         <Tab>2</Tab>

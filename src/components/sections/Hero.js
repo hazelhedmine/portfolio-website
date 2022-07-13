@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Heading, Image, Stack } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 const Hero = props => {
   return (
@@ -42,6 +50,7 @@ const Hero = props => {
         </Heading>
         <Button
           as="a"
+          color={useColorModeValue('white', 'black')}
           colorScheme="coral"
           borderRadius="8px"
           lineHeight="1"

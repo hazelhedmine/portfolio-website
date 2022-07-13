@@ -37,7 +37,7 @@ const LandingPage = () => {
 
       <Box align="center" px={8} mb={32} w="80%">
         <Tabs
-          colorScheme="cyan"
+          colorScheme={useColorModeValue('cyan', 'coral')}
           variant="soft-rounded" //bc of custom styling
           align="center"
           size={{ base: 'sm', sm: 'md', md: 'lg' }}
@@ -53,12 +53,12 @@ const LandingPage = () => {
             <Tab>PROJECTS</Tab>
           </TabList>
           <TabPanels
-            bg={useColorModeValue('white')}
+            bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.200')}
             borderRadius="lg"
             borderBottom="4px solid" //for pop up effect
-            borderBottomColor="cyan.200"
+            borderBottomColor={useColorModeValue('cyan.200', 'coral.800')}
             borderRight="4px solid"
-            borderRightColor="cyan.200"
+            borderRightColor={useColorModeValue('cyan.200', 'coral.800')}
           >
             <TabPanel>
               <Education></Education>
