@@ -7,7 +7,7 @@ import {
   useClipboard,
 } from '@chakra-ui/react';
 
-import { EmailIcon, CopyIcon, CheckIcon } from '@chakra-ui/icons';
+import { EmailIcon, CheckIcon } from '@chakra-ui/icons';
 
 const ContactInfo = () => {
   const EMAIL = 'zelleh15@gmail.com';
@@ -39,7 +39,7 @@ const ContactInfo = () => {
         click to copy
       </Text>
       <Button
-        as="text"
+        as="p"
         size="sm"
         fontSize="sm"
         aria-label={`Go to Repository`}

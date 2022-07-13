@@ -1,7 +1,5 @@
 import {
   Box,
-  Divider,
-  Flex,
   Heading,
   Tab,
   TabList,
