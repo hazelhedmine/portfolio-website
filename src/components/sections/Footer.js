@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from '@chakra-ui/react';
+import { Box, Button, Flex, useColorModeValue } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const Footer = () => {
@@ -9,9 +9,9 @@ const Footer = () => {
           size="sm"
           fontSize="sm"
           aria-label={`Go to Repository`}
+          color={useColorModeValue('white', 'black')}
           variant="solid"
           colorScheme="coral"
-          marginLeft="2"
           onClick={() => {
             window.open('https://github.com/hazelhedmine/portfolio-website');
           }}

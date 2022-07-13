@@ -1,5 +1,7 @@
 import {
   Box,
+  Divider,
+  Flex,
   Heading,
   Tab,
   TabList,
@@ -15,6 +17,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import Education from '../components/sections/Education';
 import Work from '../components/sections/Work';
 import Projects from '../components/sections/Projects';
+import ContactInfo from '../components/sections/ContactInfo';
 
 const LandingPage = () => {
   return (
@@ -37,7 +40,7 @@ const LandingPage = () => {
 
       <Box align="center" px={8} mb={32} w="80%">
         <Tabs
-          colorScheme={useColorModeValue('cyan', 'coral')}
+          colorScheme={useColorModeValue('cyan', 'yellow')}
           variant="soft-rounded" //bc of custom styling
           align="center"
           size={{ base: 'sm', sm: 'md', md: 'lg' }}
@@ -56,9 +59,9 @@ const LandingPage = () => {
             bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.200')}
             borderRadius="lg"
             borderBottom="4px solid" //for pop up effect
-            borderBottomColor={useColorModeValue('cyan.200', 'coral.800')}
+            borderBottomColor={useColorModeValue('cyan.200', 'yellow.100')}
             borderRight="4px solid"
-            borderRightColor={useColorModeValue('cyan.200', 'coral.800')}
+            borderRightColor={useColorModeValue('cyan.200', 'yellow.100')}
           >
             <TabPanel>
               <Education></Education>
@@ -72,6 +75,8 @@ const LandingPage = () => {
           </TabPanels>
         </Tabs>
       </Box>
+
+      <ContactInfo></ContactInfo>
     </LandingLayout>
   );
 };
