@@ -13,13 +13,13 @@ import {
 const Work = ({ props }) => {
   return (
     <Flex direction="column" p={6} gap={6}>
-      <Stat textAlign="left">
+      <Stat textAlign={{ base: 'center', md: 'left' }}>
         <StatLabel>Advanced Micro Devices (Singapore)</StatLabel>
         <StatNumber>Product Engineering Intern</StatNumber>
         <StatHelpText>May 2021 - November 2021</StatHelpText>
       </Stat>
 
-      <Flex gap={4} flexWrap="wrap">
+      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
         <Tag colorScheme="coral">Python</Tag>
         <Tag colorScheme="coral">Tkinter</Tag>
         <Tag colorScheme="coral">GUI</Tag>

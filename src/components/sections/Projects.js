@@ -7,7 +7,6 @@ import {
   ListItem,
   Menu,
   MenuButton,
-  MenuIcon,
   MenuItem,
   MenuList,
   Stat,
@@ -18,17 +17,16 @@ import {
 } from '@chakra-ui/react';
 
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { GrDocumentUser } from 'react-icons/gr';
 
 const Projects = ({ props }) => {
   return (
     <Flex direction="column" p={6} gap={6}>
-      <Stat textAlign="left">
+      <Stat textAlign={{ base: 'center', md: 'left' }}>
         <StatNumber>Portfolio Website</StatNumber>
         <StatHelpText>It's this website!</StatHelpText>
       </Stat>
 
-      <Flex gap={4} flexWrap="wrap">
+      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
         <Tag colorScheme="cyan">Javascript</Tag>
         <Tag colorScheme="cyan">React</Tag>
         <Tag colorScheme="cyan">Chakra UI</Tag>
@@ -43,12 +41,12 @@ const Projects = ({ props }) => {
       {/*---------------------------------*/}
       <Divider borderBottomColor="cyan.300"></Divider>
 
-      <Stat textAlign="left">
+      <Stat textAlign={{ base: 'center', md: 'left' }}>
         <StatNumber>Augmented Reality Laser Tag System</StatNumber>
         <StatHelpText>Jan 2022 - May 2022</StatHelpText>
       </Stat>
 
-      <Flex gap={4} flexWrap="wrap">
+      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
         <Tag colorScheme="coral">Unity</Tag>
         <Tag colorScheme="coral">Vuforia Engine</Tag>
         <Tag colorScheme="coral">C#</Tag>
@@ -84,39 +82,44 @@ const Projects = ({ props }) => {
       {/*---------------------------------*/}
       <Divider borderBottomColor="cyan.300"></Divider>
 
-      <Flex justify="space-between">
-        <Stat textAlign="left">
+      <Flex
+        justify={{ base: 'left', md: 'space-between' }}
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <Stat textAlign={{ base: 'center', md: 'left' }}>
           <StatNumber>UniTracker</StatNumber>
           <StatHelpText>January 2021 - May 2021</StatHelpText>
         </Stat>
-        <Menu>
-          <MenuButton
-            variant="ghost"
-            as={Button}
-            rightIcon={<ChevronDownIcon />}
-          >
-            links
-          </MenuButton>
-          <MenuList>
-            <MenuItem
-              as={Link}
-              isExternal
-              href="https://ay2021s2-cs2113t-f08-4.github.io/tp/UserGuide.html"
+        <Box align="center">
+          <Menu>
+            <MenuButton
+              variant={{ base: 'outline', md: 'ghost' }}
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
             >
-              User Guide
-            </MenuItem>
-            <MenuItem
-              as={Link}
-              isExternal
-              href="https://github.com/AY2021S2-CS2113T-F08-4/tp"
-            >
-              Source Code
-            </MenuItem>
-          </MenuList>
-        </Menu>
+              links
+            </MenuButton>
+            <MenuList>
+              <MenuItem
+                as={Link}
+                isExternal
+                href="https://ay2021s2-cs2113t-f08-4.github.io/tp/UserGuide.html"
+              >
+                User Guide
+              </MenuItem>
+              <MenuItem
+                as={Link}
+                isExternal
+                href="https://github.com/AY2021S2-CS2113T-F08-4/tp"
+              >
+                Source Code
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </Box>
       </Flex>
 
-      <Flex gap={4} flexWrap="wrap">
+      <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
         <Tag colorScheme="purple">CLI</Tag>
         <Tag colorScheme="purple">Java</Tag>
         <Tag colorScheme="purple">JUnit</Tag>

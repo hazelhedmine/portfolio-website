@@ -14,16 +14,18 @@ import {
 const Education = ({ props }) => {
   return (
     <Flex direction="column" p={6} gap={6}>
-      <Stat textAlign="left">
+      <Stat textAlign={{ base: 'center', md: 'left' }}>
         <StatLabel>National University of Singapore</StatLabel>
         <StatNumber>Bachelor of Engineering (Computer Engineering)</StatNumber>
         <StatHelpText>August 2019 - May 2023</StatHelpText>
       </Stat>
 
       <Box align="left">
-        <Tag marginBottom={2} colorScheme="coral">
-          Relevant Courses
-        </Tag>
+        <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
+          <Tag marginBottom={2} colorScheme="coral">
+            Relevant Courses
+          </Tag>
+        </Flex>
         <UnorderedList fontSize="sm">
           <ListItem>Programming Methodology (Python)</ListItem>
           <ListItem>Data Structure and Algorithms (C++)</ListItem>
@@ -37,12 +39,20 @@ const Education = ({ props }) => {
       </Box>
 
       <Box align="left">
-        <Tag marginBottom={2} colorScheme="purple">
-          Co-Curricular Activities
-        </Tag>
+        <Flex gap={4} flexWrap="wrap" justify={{ base: 'center', md: 'left' }}>
+          <Tag marginBottom={2} colorScheme="purple">
+            Co-Curricular Activities
+          </Tag>
+        </Flex>
         <Box fontSize="sm">
-          <b>Welfare Head of Electrical and Computer Engineering Club</b>
-          <Text marginBottom={1} color="gray">
+          <Text textAlign={{ base: 'center', md: 'left' }}>
+            <b>Welfare Head of Electrical and Computer Engineering Club</b>
+          </Text>
+          <Text
+            marginBottom={1}
+            color="gray"
+            textAlign={{ base: 'center', md: 'left' }}
+          >
             September 2020 - May 2021
           </Text>
           <UnorderedList fontSize="sm">
