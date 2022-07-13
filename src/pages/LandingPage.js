@@ -41,6 +41,7 @@ const LandingPage = () => {
           variant="soft-rounded" //bc of custom styling
           align="center"
           size={{ base: 'sm', sm: 'md', md: 'lg' }}
+          isLazy
         >
           <TabList
             fontWeight="normal"

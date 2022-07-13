@@ -78,7 +78,6 @@ const Skills = ({ props }) => {
       >
         This is a list of my technical skills.
       </Heading>
-
       <Flex
         align="center"
         justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
@@ -92,7 +91,6 @@ const Skills = ({ props }) => {
         <TechnicalSkill icon={CIcon} skill="C"></TechnicalSkill>
         <TechnicalSkill icon={CSharpIcon} skill="C#"></TechnicalSkill>
       </Flex>
-
       <Flex align="center" display="flex" direction="column" gap={4}>
         <SkillHeader header="web development"></SkillHeader>
         <Flex
@@ -114,7 +112,6 @@ const Skills = ({ props }) => {
           <TechnicalSkill icon={ExpressIcon} skill="Express"></TechnicalSkill>
         </Flex>
       </Flex>
-
       <Flex align="center" display="flex" direction="column" gap={4}>
         <SkillHeader header="database systems"></SkillHeader>
         <Flex

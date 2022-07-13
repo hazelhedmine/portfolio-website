@@ -7,9 +7,9 @@ import {
   TabPanels,
   Tabs,
 } from '@chakra-ui/react';
+import Transition from '../transition';
 import FPGAMicroprocessor from './projects/FPGAMicroprocessor';
 import HeLeN from './projects/HeLeN';
-
 import LaserTag from './projects/LaserTag';
 import TimeToGoHome from './projects/TimeToGoHome';
 import UniTracker from './projects/UniTracker';
@@ -44,17 +44,21 @@ const SecondPage = () => {
 
 const Projects = ({ props }) => {
   return (
-    <Tabs variant="soft-rounded" colorScheme="coral" align="center">
+    <Tabs isLazy variant="soft-rounded" colorScheme="coral" align="center">
       <TabList>
         <Tab>1</Tab>
         <Tab>2</Tab>
       </TabList>
       <TabPanels>
         <TabPanel>
-          <FirstPage></FirstPage>
+          <Transition>
+            <FirstPage></FirstPage>
+          </Transition>
         </TabPanel>
         <TabPanel>
-          <SecondPage></SecondPage>
+          <Transition>
+            <SecondPage></SecondPage>
+          </Transition>
         </TabPanel>
       </TabPanels>
     </Tabs>
