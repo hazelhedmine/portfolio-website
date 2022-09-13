@@ -43,6 +43,9 @@ const Education = ({ props }) => {
             <ListItem>C Programming</ListItem>
             <ListItem>Computer Architecture (RISC-V)</ListItem>
             <ListItem>Database Systems (PostgreSQL)</ListItem>
+            <ListItem>Real-Time Operating Systems</ListItem>
+            <ListItem>Computer Networks</ListItem>
+            <ListItem>Software Engineering Principles and Patterns</ListItem>
           </UnorderedList>
         </Box>
         <Box align="left">
